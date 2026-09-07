@@ -134,6 +134,12 @@ int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
             }
         }
     }
+    for (int i = 0; i < n_tarefas; i++) {
+        if (tarefas[i].restante > 0) {
+            tarefas[i].killed++;
+        }
+    }  
+            
     return 0;
 }
 #define LOGIN "jrxs"
@@ -177,10 +183,20 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    for (int i = 0; i < n_tarefas; i++) {
-        fprintf(out, "%s: completadas=%d perdidas=%d\n",
-                tarefas[i].nome, tarefas[i].completadas, tarefas[i].perdidas);
-    }
+    fprintf(out, "LOST DEADLINES\n");
+        for (int i = 0; i < n_tarefas; i++) {
+            fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].perdidas);
+        }
+
+    fprintf(out, "COMPLETE EXECUTION\n");
+        for (int i = 0; i < n_tarefas; i++) {
+            fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].completadas);
+        }
+
+    fprintf(out, "KILLED\n");
+        for (int i = 0; i < n_tarefas; i++) {
+            fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].killed);
+        }
 
     fclose(out);
     free(tarefas);

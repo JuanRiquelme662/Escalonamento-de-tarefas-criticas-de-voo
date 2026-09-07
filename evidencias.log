@@ -158,4 +158,16 @@ B: completadas=1 perdidas=2
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
 [?2004lgcc -Wall -Wextra -o scheduler main.c
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make./scheduler rate teste_01.txt
-[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-P
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clean[Kr
+[?2004lmake: *** No rule to make target 'clear'.  Stop.
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ mkae[K[K[Kakle[K[Ke
+[?2004lgcc -Wall -Wextra -o scheduler main.c
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clear./scheduler rate teste_01.txt
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt[Kmake
+[?2004lgcc -Wall -Wextra -o scheduler main.c
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make./scheduler rate teste_01.txt
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt[Kmake
+[?2004lgcc -Wall -Wextra -o scheduler main.c
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make./scheduler rate teste_01.txt
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-
