@@ -168,6 +168,13 @@ int main(int argc, char *argv[]){
                i, tarefas[i].nome, tarefas[i].periodo,
                tarefas[i].deadline_rel, tarefas[i].burst);
     }
+    loop_principal(tempo_total, tarefas, n_tarefas, eh_rate);
+
+    printf("\n--- resultados ---\n");
+    for (int i = 0; i < n_tarefas; i++) {
+        printf("%s: completadas=%d perdidas=%d\n",
+            tarefas[i].nome, tarefas[i].completadas, tarefas[i].perdidas);
+    }
 
     free(tarefas);
     return 0;
