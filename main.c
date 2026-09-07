@@ -104,8 +104,6 @@ int escolhe_tarefa(task *tarefas, int n, int eh_rate) {
 }
 
 int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
-    bloco_tarefa = -2;   // sentinela: "nenhum bloco aberto ainda"
-    ultimo_bloco_idx[i];
     for (int t = 0; t < tempo_total; t++) {
 
         // 1. verifica se alguma tarefa perdeu o deadline agora
@@ -114,30 +112,28 @@ int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
                     tarefas[i].perdidas++;
                     tarefas[i].restante = 0;
                 }
-            }
+        }
 
             // 2. verifica se alguma tarefa chega agora (nova instancia)
-            for (int i = 0; i < n_tarefas; i++) {
-                if (tarefas[i].proxima_chegada == t) {
-                    tarefas[i].restante = tarefas[i].burst;
-                    tarefas[i].deadline_absoluto = t + tarefas[i].deadline_rel;
-                    tarefas[i].proxima_chegada += tarefas[i].periodo;
-                }
+        for (int i = 0; i < n_tarefas; i++) {
+            if (tarefas[i].proxima_chegada == t) {
+                tarefas[i].restante = tarefas[i].burst;
+                tarefas[i].deadline_absoluto = t + tarefas[i].deadline_rel;
+                tarefas[i].proxima_chegada += tarefas[i].periodo;
             }
+        }
 
             // 3. escolhe quem roda neste instante
-            int escolhida = escolhe_tarefa(tarefas, n_tarefas, eh_rate);
+        int escolhida = escolhe_tarefa(tarefas, n_tarefas, eh_rate);
 
-            // 4. executa 1 unidade de tempo da tarefa escolhida
-            if (escolhida != -1) {
-                tarefas[escolhida].restante--;
-                if (tarefas[escolhida].restante == 0) {
-                    tarefas[escolhida].completadas++;
-                }
+        // 4. executa 1 unidade de tempo da tarefa escolhida
+        if (escolhida != -1) {
+            tarefas[escolhida].restante--;
+            if (tarefas[escolhida].restante == 0) {
+                tarefas[escolhida].completadas++;
             }
         }
     }
-}
     return 0;
 }
 int main(int argc, char *argv[]){
