@@ -136,6 +136,8 @@ int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
     }
     return 0;
 }
+#define LOGIN "jrxs"
+
 int main(int argc, char *argv[]){
     if(argc != 3){
         fprintf(stderr, "formatacao esperada: ./scheduler rate/edf <arquivo de entrada>\n");
@@ -143,10 +145,13 @@ int main(int argc, char *argv[]){
     }
 
     int eh_rate;
+    const char *nome_algo;
     if(strcmp(argv[1], "rate") == 0){
         eh_rate = 1;
+        nome_algo = "rate";
     }else if(strcmp(argv[1], "edf") == 0){
         eh_rate = 0;
+        nome_algo = "edf";
     }else{
         fprintf(stderr, "formatacao esperada: ./scheduler rate/edf <arquivo de entrada>\n");
         return 1;
@@ -157,25 +162,27 @@ int main(int argc, char *argv[]){
     int n_tarefas;
 
     if (parse_arquivo(argv[2], &tempo_total, &tarefas, &n_tarefas) != 0) {
-        // parse_arquivo ja imprimiu o erro em stderr
         return 1;
     }
 
-    // ---- debug temporario: conferir se os dados foram lidos certo ----
-    printf("tempo total: %d\n", tempo_total);
-    for (int i = 0; i < n_tarefas; i++) {
-        printf("tarefa %d: nome=%s periodo=%d deadline=%d burst=%d\n",
-               i, tarefas[i].nome, tarefas[i].periodo,
-               tarefas[i].deadline_rel, tarefas[i].burst);
-    }
     loop_principal(tempo_total, tarefas, n_tarefas, eh_rate);
 
-    printf("\n--- resultados ---\n");
-    for (int i = 0; i < n_tarefas; i++) {
-        printf("%s: completadas=%d perdidas=%d\n",
-            tarefas[i].nome, tarefas[i].completadas, tarefas[i].perdidas);
+    char nome_saida[64];
+    snprintf(nome_saida, sizeof(nome_saida), "%s_%s.out", nome_algo, LOGIN);
+
+    FILE *out = fopen(nome_saida, "w");
+    if (!out) {
+        fprintf(stderr, "erro: nao foi possivel criar arquivo de saida '%s'\n", nome_saida);
+        free(tarefas);
+        return 1;
     }
 
+    for (int i = 0; i < n_tarefas; i++) {
+        fprintf(out, "%s: completadas=%d perdidas=%d\n",
+                tarefas[i].nome, tarefas[i].completadas, tarefas[i].perdidas);
+    }
+
+    fclose(out);
     free(tarefas);
     return 0;
 }
