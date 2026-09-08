@@ -103,7 +103,28 @@ int escolhe_tarefa(task *tarefas, int n, int eh_rate) {
     return escolhida;
 }
 
+void fechar_bloco(bloco_log **log, int *n_log, int *cap_log, int tarefa_atual, char razao, int inicio, int fim) {
+    if (fim <= inicio){
+    return;
+    }
+
+    if (*n_log == *cap_log) {
+    *cap_log = (*cap_log == 0) ? 8 : *cap_log * 2;
+    *log = realloc(*log, *cap_log * sizeof(bloco_log));
+    }
+   
+    (*log)[*n_log].tarefa = tarefa_atual;
+    (*log)[*n_log].razao = razao;
+    (*log)[*n_log].duracao = fim - inicio;
+    (*n_log)++;
+}
+
 int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
+    int current = -1;
+    int seg_start = 0;
+
+    bloco_log *log = NULL;
+    int n_log = 0, cap_log = 0;
     for (int t = 0; t < tempo_total; t++) {
 
         // 1. verifica se alguma tarefa perdeu o deadline agora
