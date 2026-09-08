@@ -17,7 +17,7 @@ typedef struct task{
     int killed;
 }task;
 
-typedef struct {
+typedef struct bloco_log {
     int tarefa;   // indice da tarefa, ou -1 para idle
     char razao;   // 'F', 'H', 'L', ou 0 se for bloco idle
     int duracao;
@@ -119,7 +119,7 @@ void fechar_bloco(bloco_log **log, int *n_log, int *cap_log, int tarefa_atual, c
     (*n_log)++;
 }
 
-int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
+void loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate, bloco_log **log_out, int *n_log_out) {
     int current = -1;
     int seg_start = 0;
 
@@ -129,12 +129,17 @@ int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
 
         // 1. verifica se alguma tarefa perdeu o deadline agora
         for (int i = 0; i < n_tarefas; i++) {
-                if (tarefas[i].restante > 0 && tarefas[i].deadline_absoluto == t) {
-                    tarefas[i].perdidas++;
-                    tarefas[i].restante = 0;
+            if (tarefas[i].restante > 0 && tarefas[i].deadline_absoluto == t) {
+                tarefas[i].perdidas++;
+                if (current == i) {
+                    fechar_bloco(&log, &n_log, &cap_log, current, 'L', seg_start, t);
+                    current = -1;
+                    seg_start = t;
                 }
+                tarefas[i].restante = 0;
+            }
         }
-
+        
             // 2. verifica se alguma tarefa chega agora (nova instancia)
         for (int i = 0; i < n_tarefas; i++) {
             if (tarefas[i].proxima_chegada == t) {
@@ -146,26 +151,42 @@ int loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate) {
 
             // 3. escolhe quem roda neste instante
         int escolhida = escolhe_tarefa(tarefas, n_tarefas, eh_rate);
+        if (escolhida != current) {
+            char razao = (current != -1) ? 'H' : 0;
+            fechar_bloco(&log, &n_log, &cap_log, current, razao, seg_start, t);
+            current = escolhida;
+            seg_start = t;
+        }
 
         // 4. executa 1 unidade de tempo da tarefa escolhida
         if (escolhida != -1) {
             tarefas[escolhida].restante--;
             if (tarefas[escolhida].restante == 0) {
                 tarefas[escolhida].completadas++;
+                fechar_bloco(&log, &n_log, &cap_log, current, 'F', seg_start, t + 1);
+                current = -1;
+                seg_start = t + 1;
             }
         }
     }
+    fechar_bloco(&log, &n_log, &cap_log, current, 0, seg_start, tempo_total);
+
     for (int i = 0; i < n_tarefas; i++) {
         if (tarefas[i].restante > 0) {
             tarefas[i].killed++;
         }
     }  
             
-    return 0;
+    *log_out = log;
+    *n_log_out = n_log;
+    return;
 }
 #define LOGIN "jrxs"
 
 int main(int argc, char *argv[]){
+    bloco_log *log = NULL;
+    int n_log = 0;
+
     if(argc != 3){
         fprintf(stderr, "formatacao esperada: ./scheduler rate/edf <arquivo de entrada>\n");
         return 1;
@@ -192,7 +213,7 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    loop_principal(tempo_total, tarefas, n_tarefas, eh_rate);
+    loop_principal(tempo_total, tarefas, n_tarefas, eh_rate, &log, &n_log);
 
     char nome_saida[64];
     snprintf(nome_saida, sizeof(nome_saida), "%s_%s.out", nome_algo, LOGIN);
@@ -202,6 +223,19 @@ int main(int argc, char *argv[]){
         fprintf(stderr, "erro: nao foi possivel criar arquivo de saida '%s'\n", nome_saida);
         free(tarefas);
         return 1;
+    }
+    fprintf(out, "EXECUTION BY %s\n", eh_rate ? "RATE" : "EDF");
+
+    for (int i = 0; i < n_log; i++) {
+        if (log[i].tarefa == -1) {
+            fprintf(out, "idle for %d units\n", log[i].duracao);
+        } else {
+            fprintf(out, "[%s] for %d units", tarefas[log[i].tarefa].nome, log[i].duracao);
+            if (log[i].razao != 0) {
+                fprintf(out, " - %c", log[i].razao);
+            }
+            fprintf(out, "\n");
+        }
     }
 
     fprintf(out, "LOST DEADLINES\n");
@@ -220,6 +254,7 @@ int main(int argc, char *argv[]){
         }
 
     fclose(out);
+    free(log);
     free(tarefas);
     return 0;
 }
