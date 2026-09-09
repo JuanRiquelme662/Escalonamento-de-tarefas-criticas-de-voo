@@ -1,2 +1,2 @@
-scheduler: main.c
-	gcc -Wall -Wextra -o scheduler main.c
+scheduler: main.c funcoes.c funcoes.h
+	gcc -Wall -Wextra -o scheduler main.c funcoes.c

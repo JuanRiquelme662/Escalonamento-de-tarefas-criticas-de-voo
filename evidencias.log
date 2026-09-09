@@ -170,4 +170,7 @@ B: completadas=1 perdidas=2
 [?2004lgcc -Wall -Wextra -o scheduler main.c
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make./scheduler rate teste_01.txt
 [?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt
-[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-Script started on 2026-09-09 17:36:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="176" LINES="26"]
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
+[?2004lmake: 'scheduler' is up to date.
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-c
