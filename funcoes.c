@@ -131,6 +131,7 @@ void loop_principal(int tempo_total, task *tarefas, int n_tarefas, int eh_rate, 
 
         int escolhida = escolhe_tarefa(tarefas, n_tarefas, eh_rate);
         if (escolhida != current) {
+            //nao gosto de operador ternario, mas utilizei para enxugar o codigo
             char razao = (current != -1) ? 'H' : 0;
             fechar_bloco(&log, &n_log, &cap_log, current, razao, seg_start, t);
             current = escolhida;
