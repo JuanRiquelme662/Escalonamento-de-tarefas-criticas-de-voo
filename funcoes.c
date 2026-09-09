@@ -24,7 +24,7 @@ int parse_arquivo(const char *caminho, int *tempo_total, task **tarefas, int *n_
         fprintf(stderr, "erro: arquivo vazio\n");
         fclose(f); return -1;
     }
-    //agora tempo total trata /n e/r
+    //agora strtok trata /n e/r
     *tempo_total = transforma_string_numero(strtok(linha, "\n\r"));
     if (*tempo_total <= 0) {
         fprintf(stderr, "erro: tempo total invalido\n");

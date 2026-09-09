@@ -196,4 +196,44 @@ make: *** [Makefile:2: scheduler] Error 1
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make f[K[K
 [?2004lgcc -Wall -Wextra main.c funcoes.c -o scheduler
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make cleannaar[K./scheduler edf teste_01.txt
-[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/reposit
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7m./scheduler rate[27m./scheduler rate
+[?2004lformatacao esperada: ./scheduler rate/edf <arquivo de entrada>
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7m./scheduler rate[27m[1P./scheduler rat[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7m./scheduler fifo voo.txt[27m./scheduler fifo voo.txt
+[?2004lformatacao esperada: ./scheduler rate/edf <arquivo de entrada>
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7m./scheduler rate[27m
+[7mecho $?[27m[A]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate
+echo $?
+[?2004lformatacao esperada: ./scheduler rate/edf <arquivo de entrada>
+1
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ls
+[?2004l[0m[01;32mLICENSE[0m  [01;32mMakefile[0m  [01;32mREADME.md[0m  [01;32medf_jrxs.out[0m  [01;32mevidencias.log[0m  [01;32mfuncoes.c[0m  [01;32mfuncoes.h[0m  [01;32mmain.c[0m  [01;32mscheduler[0m  [01;32mscheduler.exe[0m  [01;32mteste_01.txt[0m  [01;32mteste_02.txt[0m  [01;32mteste_03.txt[0m
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clear
+[?2004lmake: *** No rule to make target 'clear'.  Stop.
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ma[K[Kmal[Kke clean
+[?2004lrm -f scheduler *.out
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
+[?2004lgcc -Wall -Wextra main.c funcoes.c -o scheduler
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make cleanrls[K[K[K[7m./scheduler fifo voo.txt[27m
+[7mecho $?[27m[A]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler fifo voo.txt
+echo $?
+[?2004lformatacao esperada: ./scheduler rate/edf <arquivo de entrada>
+1
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7m./scheduler rate nao_existe.txt[27m
+[7mecho $?[27m[A]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate nao_existe.txt
+echo $?[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@t[1@e[1@s[1@t[1@e[1@_[1@0[1@9
+
+[?2004lerro: nao foi possivel abrir 'teste_09.txt'
+1
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ echo $?./scheduler rate teste_09.txt[1P[1@1
+[?2004lerro: linha malformada: 'ATT 20 12'
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt
+[?2004lerro: tarefa 'ATT' invalida
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7m./scheduler rate invalido.txt[27m
+[7mecho $?[27m[A]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate invalido.txt
+[1Pecho $[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./scheduler rate teste_01.txt [K[Kt echo$?
+[?2004lformatacao esperada: ./scheduler rate/edf <arquivo de entrada>
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt echo$?[Kecho $?
+[?2004l1
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clear[Kn\[K
+[?2004lrm -f scheduler *.out
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/De
