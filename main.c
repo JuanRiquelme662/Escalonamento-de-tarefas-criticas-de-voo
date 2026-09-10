@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
         free(log);
         return 1;
     }
-    fprintf(out, "EXECUTION BY %s\n", eh_rate ? "RATE" : "EDF");
+    fprintf(out, "EXECUTION BY %s\n\n", eh_rate ? "RATE" : "EDF");
 
     for (int i = 0; i < n_log; i++) {
         if (log[i].tarefa == -1) {
@@ -61,17 +61,17 @@ int main(int argc, char *argv[]){
         }
     }
 
-    fprintf(out, "LOST DEADLINES\n");
+    fprintf(out, "\nLOST DEADLINES\n");
         for (int i = 0; i < n_tarefas; i++) {
             fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].perdidas);
         }
 
-    fprintf(out, "COMPLETE EXECUTION\n");
+    fprintf(out, "\nCOMPLETE EXECUTION\n");
         for (int i = 0; i < n_tarefas; i++) {
             fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].completadas);
         }
 
-    fprintf(out, "KILLED\n");
+    fprintf(out, "\nKILLED\n");
         for (int i = 0; i < n_tarefas; i++) {
             fprintf(out, "[%s] %d\n", tarefas[i].nome, tarefas[i].killed);
         }
