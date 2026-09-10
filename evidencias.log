@@ -236,4 +236,26 @@ make: *** [Makefile:2: scheduler] Error 1
 [?2004l1
 [?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clear[Kn\[K
 [?2004lrm -f scheduler *.out
-[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/De
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [7mgrep -n "error" evidencias.log[27mgrep -n "error" evidencias.log
+[?2004l[32m[K15[m[K[36m[K:[m[K[01m[Kcc1:[m[K [01;31m[Kfatal [01;31m[Kerror[m[K: [m[Kscheduler.c: No such file or directory
+[32m[K61[m[K[36m[K:[m[K[01m[Kmain.c:138:1:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+[32m[K64[m[K[36m[K:[m[K[01m[Kmain.c:139:5:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kreturn[m[K’
+[32m[K67[m[K[36m[K:[m[K[01m[Kmain.c:140:1:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+[32m[K81[m[K[36m[K:[m[K[01m[Kmain.c:138:5:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kreturn[m[K’
+[32m[K84[m[K[36m[K:[m[K[01m[Kmain.c:139:1:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+[32m[K179[m[K[36m[K:[m[K[01m[Kfuncoes.h:1:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kunterminated #ifndef
+[32m[K182[m[K[36m[K:[m[K[01m[Kfuncoes.h:1:[m[K [01;31m[K[01;31m[Kerror[m[K: [m[Kunterminated #ifndef
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ grep -n "error" evidencias.log[20Pmake clean[3Pecho $?make clean
+[?2004lrm -f scheduler *.out
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
+[?2004lgcc -Wall -Wextra main.c funcoes.c -o scheduler
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make cleangrep -n "error" evidencias.log[20Pmake clean[3Pecho $?[29@./scheduler rate teste_01.txt echo[C[C[K[K[K[K[K[K[K
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ ./scheduler rate teste_01.txt[1P[1P[1P[1P[1@e[1@d[1@f
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
+[?2004lgcc -Wall -Wextra main.c funcoes.c -o scheduler
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make./scheduler edf teste_01.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake clean
+[?2004lrm -f scheduler *.out
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make
+[?2004lgcc -Wall -Wextra main.c funcoes.c -o scheduler
+[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ make clean[K./scheduler edf teste_01.txt
+[?2004l[?2004h]0;mito@JUAN-PC: /mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32mmito@JUAN-PC[00m:[01;34m/mnt/c/Users/Mito/Desktop/repositorios/Pong-Champs/Escalonamento-de-tarefas-cr-ticas-de-

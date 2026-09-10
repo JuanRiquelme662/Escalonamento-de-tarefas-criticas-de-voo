@@ -33,6 +33,11 @@ int parse_arquivo(const char *caminho, int *tempo_total, task **tarefas, int *n_
 
     int cap = 4, n = 0;
     task *lista = malloc(cap * sizeof(task));
+    if (!lista) {
+        fprintf(stderr, "erro: falha ao alocar memoria\n");
+        fclose(f);
+        return -1;
+    }
 
     char nome[32], c1[32], c2[32], c3[32];
     while (fgets(linha, sizeof(linha), f)) {
@@ -50,7 +55,18 @@ int parse_arquivo(const char *caminho, int *tempo_total, task **tarefas, int *n_
             free(lista); fclose(f); return -1;
         }
 
-        if (n == cap) { cap *= 2; lista = realloc(lista, cap * sizeof(task)); }
+        if (n == cap) {
+            cap *= 2; 
+            task *tmp = realloc(lista, cap * sizeof(task));
+            if (!tmp) {
+                fprintf(stderr, "erro: falha ao realocar memoria\n");
+                free(lista);
+                fclose(f);
+                return -1;
+            }
+            lista = tmp;
+        }
+        
 
         strncpy(lista[n].nome, nome, 31);
         lista[n].nome[31] = '\0';
@@ -91,8 +107,14 @@ void fechar_bloco(bloco_log **log, int *n_log, int *cap_log, int tarefa_atual, c
     }
 
     if (*n_log == *cap_log) {
-    *cap_log = (*cap_log == 0) ? 8 : *cap_log * 2;
-    *log = realloc(*log, *cap_log * sizeof(bloco_log));
+        *cap_log = (*cap_log == 0) ? 8 : *cap_log * 2;
+        bloco_log *tmp = realloc(*log, *cap_log * sizeof(bloco_log));
+        if (!tmp) {
+            fprintf(stderr, "erro: falha ao realocar memoria do log\n");
+            free(*log);
+            exit(1);
+        }
+        *log = tmp;
     }
    
     (*log)[*n_log].tarefa = tarefa_atual;
